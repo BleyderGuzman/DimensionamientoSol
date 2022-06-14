@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">Dimensionamiento</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Calcular</string>
+
+    <string name="kwmensual">Kw mensual:</string>
+    <dimen name="sizeTkwmensual">15dp</dimen>
+
+    <string name="porcentA">% Ahorro:</string>
+    <dimen name="sizeTporcentA">15dp</dimen>
+
+    <string name="payMonth">Pago Mensual:</string>
+    <dimen name="sizeTpayMonth">15dp</dimen>
+
+    <string name="hrsSun">Horas Sol:</string>
+    <dimen name="sizeThrsSun">15dp</dimen>
+
+    <string name="textPIncrement">% Crecimiento:</string>
+    <dimen name="sizeTtextPIncrement">15dp</dimen>
+
+    <string name="textPowerPanels">Potencia Panel:</string>
+    <dimen name="sizetextPowerPanels">15dp</dimen>
+
+    <string name="textSF">% Fs:</string>
+    <dimen name="sizetexttextSF">15dp</dimen>
+
+    <string name="textViewAreaTitle">Area de Instalación:</string>
+    <string name="textViewKwInst">Kws a Instalar:</string>
+    <string name="textViewNroPaneles">Nro de Paneles:</string>
+    <string name="textViewTotalCost">Costo Total:</string>
+    <string name="textViewNewPay">Nuevo Saldo a Pagar:</string>
+    <string name="textViewNewInfoString">Información Strings:</string>
+    <string name="textViewNewInfoInverters">Información Inversores:</string>
+    <string name="textViewRArea">0.0</string>
+    <string name="textViewRKwI">0.0</string>
+    <string name="textViewRNrPaneles">0</string>
+    <string name="textViewRTotalCost">0.0</string>
+    <string name="textViewRNewPay">0.0</string>
+    <string name="textViewNewRInfoString">0.0</string>
+    <string name="textViewNewRInfoInverters">0.0</string>
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+    <string-array name="array_rate_increment">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="array_Fs">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="array_powerSolarPanel">
+        <item>275</item>
+        <item>330</item>
+        <item>400</item>
+        <item>450</item>
+        <item>490</item>
+        <item>535</item>
+    </string-array>
+
+    <string-array name="array_hrsSun">
+        <item>3</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4.5</item>
+        <item>5</item>
+        <item>5.5</item>
+        <item>6</item>
+        <item>6.5</item>
+        <item>7</item>
+    </string-array>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
