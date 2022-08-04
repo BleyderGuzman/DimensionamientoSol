@@ -59,6 +59,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextSave" />
 
+    <EditText
+        android:id="@+id/editTextKwConsu"
+        android:layout_width="118dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="404dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSF"
+        app:layout_constraintVertical_bias="0.0" />
+
     <Spinner
         android:id="@+id/spinnerHrSun"
         android:layout_width="118dp"
@@ -78,7 +94,6 @@
         android:layout_width="118dp"
         android:layout_height="37dp"
         android:ems="10"
-
         android:text="0"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -124,8 +139,7 @@
         android:layout_marginTop="1dp"
         android:ems="10"
         android:inputType="number"
-        android:maxLength="2"
-        android:text="0"
+        android:text="5120000"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.843"
@@ -199,6 +213,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPowerPanels"
         app:layout_constraintVertical_bias="0.149" />
+
+    <TextView
+        android:id="@+id/textViewKwConsuption"
+        android:layout_width="102dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Kw Consumido"
+        android:textSize="@dimen/sizetexttextSF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editTextKwConsu"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSF" />
 
     <TextView
         android:id="@+id/textSave"
@@ -378,16 +406,5 @@
         android:text="@string/textViewKwInst"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAreaTitle" />
-
-    <Spinner
-        android:id="@+id/spinnerPorcent"
-        android:layout_width="118dp"
-        android:layout_height="27dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.843"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerSF"
-        app:layout_constraintVertical_bias="0.039" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

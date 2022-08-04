@@ -22,9 +22,9 @@ import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
 public class SecondFragment extends Fragment {
-    private EditText editTextNumber,editTextSave,editTextHrSun,editTextPay3,editTextPay;
-    private TextView textViewRArea,textViewRKwI,textViewRNrPaneles,textViewRTotalCost;
-    private double valKw,valPorcentSave,valHrSun,valPay3, valPincrement, valPowerpanel, valFs,valRArea,valRKwI,valRNrPaneles,valRTotalCost;
+    private EditText editTextNumber,editTextSave,editTextHrSun,editTextPay3,editTextPay,editTextViewKwconsupcion;
+    private TextView textViewRArea,textViewRKwI,textViewRNrPaneles,textViewRTotalCost,textViewNewRInfoInverters;
+    private double valKw,valPorcentSave,valHrSun,valPay3, valPincrement, valPowerpanel, valFs,valKwcomsupcion,valRArea,valRKwI,valRNrPaneles,valRTotalCost;
     private Spinner  spinnerHrsSun,spinnerPIncrement,spinnerPowerPanel,spinnerFs;
     private String pro;
     private FragmentSecondBinding binding;
@@ -58,7 +58,8 @@ public class SecondFragment extends Fragment {
                  valPincrement  = Double.parseDouble(spinnerPIncrement.getSelectedItem().toString());
                  valPowerpanel  = Double.parseDouble(spinnerPowerPanel.getSelectedItem().toString());
                  valFs          = Double.parseDouble(spinnerFs.getSelectedItem().toString());
-                Calculate(valKw,valPorcentSave,valPay3,valHrSun,valPincrement,valPowerpanel,valFs);
+                 valKwcomsupcion= Double.parseDouble(editTextViewKwconsupcion.getText().toString());
+                Calculate(valKw,valPorcentSave,valPay3,valKwcomsupcion,valHrSun,valPincrement,valPowerpanel,valFs);
             }
         });
     }
@@ -72,12 +73,13 @@ public class SecondFragment extends Fragment {
         editTextNumber = (EditText) getView().findViewById(R.id.editTextNumber);
         editTextPay3 = (EditText) getView().findViewById(R.id.editTextPay3);
         editTextSave = (EditText) getView().findViewById(R.id.editTextSave);
-
+        editTextViewKwconsupcion= (EditText) getView().findViewById(R.id.editTextKwConsu);
 
         textViewRArea=(TextView) getView().findViewById(R.id.textViewRArea);
         textViewRKwI=(TextView) getView().findViewById(R.id.textViewRKwI);
         textViewRNrPaneles=(TextView) getView().findViewById(R.id.textViewRNrPaneles);
         textViewRTotalCost=(TextView) getView().findViewById(R.id.textViewRTotalCost);
+        textViewNewRInfoInverters=(TextView) getView().findViewById(R.id.textViewNewRInfoInverters);
 
         spinnerHrsSun= (Spinner) getView().findViewById(R.id.spinnerHrSun);
         ArrayAdapter<CharSequence> adapterHrsSun = ArrayAdapter.createFromResource(getActivity().getBaseContext(),
@@ -109,7 +111,7 @@ public class SecondFragment extends Fragment {
 
 
 
-    public void Calculate(double valKwT, double valPorcentSave, double valPay3, double valHrSunT, double valPincrement, double valPowerpanel, double valFs)
+    public void Calculate(double valKwT, double valPorcentSave, double valPay3, double valKwcomsup, double valHrSunT, double valPincrement, double valPowerpanel, double valFs)
     {
 
         double powerDay= (valKwT*1000)/29;
@@ -118,7 +120,11 @@ public class SecondFragment extends Fragment {
         double powerInstaller= ((powerDay/valHrSunT)*pIncrement*pFs)/1000;
         double nroPanels = powerInstaller/(valPowerpanel/1000);
         double Area = nroPanels*2;
-        double totalCost= valPay3*powerInstaller;
+        double valueKw=valPay3/valKwcomsup;
+        double totalCost= valPorcentSave*powerInstaller;
+        double retorno= (totalCost/(valueKw*valKwT))/12;
+
+
         DecimalFormatSymbols separador = new DecimalFormatSymbols();
         DecimalFormat format = new DecimalFormat("#.00",separador);  // crea formato para reducir numero de decimales
 
@@ -126,6 +132,8 @@ public class SecondFragment extends Fragment {
         textViewRArea.setText(format.format(Area));
         textViewRKwI.setText(format.format(powerInstaller));
         textViewRTotalCost.setText(format.format(totalCost));
+        textViewNewRInfoInverters.setText(format.format(retorno));
+
 
 
     }
